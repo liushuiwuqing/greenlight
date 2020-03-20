@@ -37,7 +37,7 @@ module Authenticator
 
   # If email verification is disabled, or the user has verified, go to their room
   def check_email_verified(user)
-    # Admin users should be redirected to the admin page
+    # Admin  users should be redirected to the admin page
     if user.has_role? :super_admin
       redirect_to admins_path
     elsif user.activated?
